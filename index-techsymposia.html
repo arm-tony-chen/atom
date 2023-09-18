@@ -35,7 +35,7 @@
 
     <!-- <arm-top-navigation observeId="#ancher" subnav disabled-subnav-animation-x disabled-subnav  ui-route-disabled></arm-top-navigation> -->
 
-    <arm-top-navigation observeId="#ancher" subnav hide-subnavx ui-route-disabled></arm-top-navigation>
+    <arm-top-navigation observeId="#ancher" ui-route-disabledx lang="en"></arm-top-navigation>
 
 
     <!-- <span slot="c-subnav" disabled-subnav>
@@ -190,8 +190,10 @@
 
       document.addEventListener("arm-top-sub-link", function(e) {
         console.log(e);
+       // window.location.href = e.detail;
         var scrollIntoViewEl = e.detail.split("#");
-        scrollIntoViewEl && scrollIntoViewEl.length > 1 && document.querySelector('#' + scrollIntoViewEl[1]) && document.querySelector('#' + scrollIntoViewEl[1]).scrollIntoView({ behavior: 'smooth' });
+        window.location.href = e.detail;
+      //  scrollIntoViewEl && scrollIntoViewEl.length > 1 && document.querySelector('#' + scrollIntoViewEl[1]) && document.querySelector('#' + scrollIntoViewEl[1]).scrollIntoView({ behavior: 'smooth' });
       });
 
        // var video = document.querySelectorAll("video")[0],
@@ -233,5 +235,5 @@
 
         // });
     </script>
-  <script type="text/javascript" src="app.338849617d7d75ecda7e.techsymposia.js"></script></body>
+  <script type="text/javascript" src="app.56a00c1f61ea5c209e88.techsymposia.js"></script></body>
 </html>
