@@ -35,7 +35,7 @@
 
     <!-- <arm-top-navigation observeId="#ancher" subnav disabled-subnav-animation-x disabled-subnav  ui-route-disabled></arm-top-navigation> -->
 
-    <arm-top-navigation observeId="#ancher" ui-route-disabledx lang="en"></arm-top-navigation>
+    <arm-top-navigation observeId="#ancher" ui-route-disabledx lang="zh-tw-taipei"></arm-top-navigation>
 
 
     <!-- <span slot="c-subnav" disabled-subnav>
@@ -140,7 +140,7 @@
       <div id="about" name="about"></div>
     </div>
     
-    <arm-footer-navigation></arm-footer-navigation>
+    <arm-footer-navigation lang="zh-tw-taipei"></arm-footer-navigation>
 
     <script>
       document.addEventListener('DOMContentLoaded', function(){
@@ -156,7 +156,12 @@
           },
           {
             value: 'zh-tw-taipei',
-            text: '中文(台灣) - Taiwan Chinese',
+            text: '繁體中文 - Traditional Chinese',
+            type: 'option',
+          },
+          {
+            value: 'zh-cn-beijing',
+            text: '简体中文 - Simplified chinese',
             type: 'option',
           },
           {
@@ -190,10 +195,14 @@
 
       document.addEventListener("arm-top-sub-link", function(e) {
         console.log(e);
-       // window.location.href = e.detail;
-        var scrollIntoViewEl = e.detail.split("#");
+        console.log(e.detail.includes('#'));
+
+        if (e.detail.includes('#')) {
+          var scrollIntoViewEl = e.detail.split("#");
+          scrollIntoViewEl && scrollIntoViewEl.length > 1 && document.querySelector('#' + scrollIntoViewEl[1]) && document.querySelector('#' + scrollIntoViewEl[1]).scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
         window.location.href = e.detail;
-      //  scrollIntoViewEl && scrollIntoViewEl.length > 1 && document.querySelector('#' + scrollIntoViewEl[1]) && document.querySelector('#' + scrollIntoViewEl[1]).scrollIntoView({ behavior: 'smooth' });
       });
 
        // var video = document.querySelectorAll("video")[0],
@@ -235,5 +244,5 @@
 
         // });
     </script>
-  <script type="text/javascript" src="app.b7cae8b6f2fda6136e34.techsymposia.js"></script></body>
+  <script type="text/javascript" src="app.78f28dd2a71971fdba18.techsymposia.js"></script></body>
 </html>
