@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Arm Global Web Components</title>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-bundle.js"></script>
+    <link rel="stylesheet" href="https://www.arm.com/shared/bundle/all.css?v=1.0.8508.21393" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+ 
+ 
+    <link rel="preload" href="https://www.arm.com/static/designsystem/rel/4.10.0/arm-design-system-scoped.css" as="style" importance="high" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.arm.com/static/designsystem/rel/4.10.0/arm-design-system-scoped.css" as="style" crossorigin="anonymous">
+    <link rel="modulepreload" href="https://www.arm.com/static/designsystem/rel/4.10.0/arm-design-system/arm-design-system.esm.js" as="script" importance="high" crossorigin="anonymous">
+    <script type="module" src="https://www.arm.com/static/designsystem/rel/4.10.0/arm-design-system/arm-design-system.esm.js" crossorigin="anonymous"></script>
+    <script nomodule="" src="https://www.arm.com/static/designsystem/rel/4.10.0/arm-design-system/arm-design-system.js" crossorigin="anonymous"></script>
+
+  </head>
+
+  <style>
+    .c-custom-background {
+      background-size: cover;
+      background-color: #010101;
+      background-image: url(https://assets.swoogo.com/uploads/full/2609516-64635ec4811b6.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+
+  <body class="c-custom-background">
+    <noscript>
+      <strong>We're sorry but webcomponent doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+
+    <!-- <arm-top-navigation observeId="#ancher" subnav disabled-subnav-animation-x disabled-subnav  ui-route-disabled></arm-top-navigation> -->
+
+    <arm-top-navigation observeId="#ancher" subnav ui-route-disabledx lang="en"></arm-top-navigation>
+
+
+    <!-- <span slot="c-subnav" disabled-subnav>
+      <style>
+        .custom-subnav-element { color: green; cursor: pointer; padding: 0 12px; }
+        .custom-subnav-element-yellow { color: yellow; cursor: pointer; padding: 0 12px; }
+      </style>
+      <div class="custom-subnav-element"> green </div>
+      <div class="custom-subnav-element-yellow"> yellow </div>
+      <script>
+        var div = document.querySelector('.custom-subnav-element');
+        div.addEventListener('click', function(){ console.log('custom-subnav-element')})
+
+        var div = document.querySelector('.custom-subnav-element-yellow');
+        div.addEventListener('click', function(){ 
+          alert('custom-subnav-element-yellow')
+          var x = document.querySelector('.c-three-feature-tile__content__section__box__item__title')
+          x.innerHTML = "hhhhhh";          
+        })
+
+      </script>
+    </div> -->
+
+    <div id="app" style="text-align: center">
+      <header class="o-widget c-header c-header--tall">
+        <img class="c-masthead-placeholder" width="100%" height="100%" src="https://www.arm.com/-/media/global/products/heroes/arm-silicon-ip-cpu-sm-hero-1920x330.jpg?rev=cd92709d42b24023af1adc2d8cbf97e5&revision=cd92709d-42b2-4023-af1a-dc2d8cbf97e5" />
+      </header>
+      <div id="ancher"></div>
+      <ads-breadcrumbs></ads-breadcrumbs>
+
+      <ads-select id="select-example-vanilla" sr-label="Screenreader label" name="default"
+      style="--ads-select-trigger-width: 100%"
+      ></ads-select>
+
+      <!-- <video id="video" controls="" preload="metadata">
+        <source src="https://iandevlin.github.io/mdn/video-player-with-captions/video/sintel-short.mp4" type="video/mp4" />
+        <source src="https://iandevlin.github.io/mdn/video-player-with-captions/video/sintel-short.webm" type="video/webm" />
+      </video> -->
+
+      <div id="speakers"></div>
+      <div id="c-a73829f2-9cf9-46c2-b251-d5d9e4c3de59" class="o-widget c-three-feature-tile u-bg-color-arm-light-grey" data-widget="ThreeFeatureTile">
+        <div class="c-three-feature-tile__content">
+          <div class="c-three-feature-tile__content__section">
+            <div class="c-three-feature-tile__content__section__box">
+              <div class="c-three-feature-tile__content__section__box__item c-three-feature-tile__content__section__box__item--left">
+                <img class="c-three-feature-tile__content__section__box__item__image" src="https://www.arm.com/-/media/global/icons/homepage/mobile-computing-icon-60x75.svg?rev=8c5fae47edb0457287a0b9acde022649&amp;revision=8c5fae47-edb0-4572-87a0-b9acde022649" alt="Mobile Computing" tabindex="0" />
+              </div>
+              <div class="c-three-feature-tile__content__section__box__item c-three-feature-tile__content__section__box__item--right">
+                <div class="c-three-feature-tile__content__section__box__item__title" tabindex="0">Mobile Computing Expands on Arm</div>
+                <div class="c-three-feature-tile__content__section__box__item__description" tabindex="0">
+                  <p>Push the boundaries of efficient performance across consumer devices with specialized processing.</p>
+                </div>
+                <div class="c-three-feature-tile__content__section__box__item__cta">
+                  <a href="/markets/consumer-technologies" data-component="CallToAction" title="Learn more about consumer technologies" class="c-three-feature-tile__content__section__box__item__cta__link">
+                    <span>Learn More<span class="c-three-feature-tile__content__section__box__item__cta__link__icon fal fa-chevron-right" aria-hidden="true"></span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-three-feature-tile__content__section">
+            <div class="c-three-feature-tile__content__section__box">
+              <div class="c-three-feature-tile__content__section__box__item c-three-feature-tile__content__section__box__item--left">
+                <img class="c-three-feature-tile__content__section__box__item__image" src="https://www.arm.com/-/media/global/icons/homepage/smart-cities-icon-green.svg?rev=3a59b4efbff1425bb35d3c95c08133dc&amp;revision=3a59b4ef-bff1-425b-b35d-3c95c08133dc" alt="Smart Cities Icon for Solutions" tabindex="0" />
+              </div>
+              <div class="c-three-feature-tile__content__section__box__item c-three-feature-tile__content__section__box__item--right">
+                <div class="c-three-feature-tile__content__section__box__item__title" tabindex="0">The IoT Runs on Arm</div>
+                <div class="c-three-feature-tile__content__section__box__item__description" tabindex="0">
+                  <p>Billions of processors and millions of developers brought together by hundreds of partner companies; discover what’s next in IoT.</p>
+                </div>
+                <div class="c-three-feature-tile__content__section__box__item__cta">
+                  <a href="/markets/iot" data-component="CallToAction" title="Learn more about IoT" class="c-three-feature-tile__content__section__box__item__cta__link">
+                    <span>Learn More<span class="c-three-feature-tile__content__section__box__item__cta__link__icon fal fa-chevron-right" aria-hidden="true"></span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-three-feature-tile__content__section">
+            <div class="c-three-feature-tile__content__section__box">
+              <div class="c-three-feature-tile__content__section__box__item c-three-feature-tile__content__section__box__item--left">
+                <img class="c-three-feature-tile__content__section__box__item__image" src="https://www.arm.com/-/media/global/icons/homepage/5g-icon-arm-blue-60x75.svg?rev=94d0490e278e4290968447a7d9619ad0&amp;revision=94d0490e-278e-4290-9684-47a7d9619ad0" alt="5G icon blue" tabindex="0" />
+              </div>
+              <div class="c-three-feature-tile__content__section__box__item c-three-feature-tile__content__section__box__item--right">
+                <div class="c-three-feature-tile__content__section__box__item__title" tabindex="0">5G Connects on Arm</div>
+                <div class="c-three-feature-tile__content__section__box__item__description" tabindex="0">
+                  <p>Take advantage of best-in-class performance, performance per watt, and scale for 5G networks.</p>
+                </div>
+                <div class="c-three-feature-tile__content__section__box__item__cta">
+                  <a href="/markets/5g/infrastructure" data-component="CallToAction" title="Learn more about 5G" class="c-three-feature-tile__content__section__box__item__cta__link">
+                    <span>Learn More<span class="c-three-feature-tile__content__section__box__item__cta__link__icon fal fa-chevron-right" aria-hidden="true"></span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cities"></div>
+  
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div id="about" name="about"></div>
+    </div>
+    
+    <arm-footer-navigation lang="en"></arm-footer-navigation>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+
+        var topnav = document.querySelector("arm-top-navigation");
+        window.sessionStorage.getItem("user-visited") ? topnav.showTopSubNav() : topnav.showTopSubNavWithAnimation();
+
+        const items = [
+          {
+            value: 'en',
+            text: 'English',
+            type: 'option',
+          },
+          {
+            value: 'zh-tw-taipei',
+            text: '繁體中文 - Traditional Chinese',
+            type: 'option',
+          },
+          {
+            value: 'zh-cn-beijing',
+            text: '简体中文 - Simplified chinese',
+            type: 'option',
+          },
+          {
+            value: 'ja',
+            text: '日本語 - Japanese',
+            type: 'option',
+          },
+        ];
+
+        const select = document.getElementById('select-example-vanilla');
+        select.items = items;
+
+        document.getElementById('select-example-vanilla').addEventListener('selectChange', function(evt) {
+          var topnav = document.querySelector('arm-top-navigation');
+          topnav.setAttribute('lang', evt.detail.value);
+
+          var footernav = document.querySelector('arm-footer-navigation');
+          footernav.setAttribute('lang', evt.detail.value);
+        });
+
+      }, false);
+
+      document.addEventListener("arm-top-sub-nav-search", function (e) {
+        console.log(e.detail);
+        var url = "https://www.arm.com/search#q=";
+        var url2 = "https://developer.arm.com/search#q=";
+        var url3 = "https://www.google.com/search?q=";
+          location.href = url3 + e.detail;
+
+      });
+
+      document.addEventListener("arm-top-sub-link", function(e) {
+        console.log(e);
+        console.log(e.detail.includes('#'));
+
+        if (e.detail.includes('#')) {
+          var scrollIntoViewEl = e.detail.split("#");
+          scrollIntoViewEl && scrollIntoViewEl.length > 1 && document.querySelector('#' + scrollIntoViewEl[1]) && document.querySelector('#' + scrollIntoViewEl[1]).scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
+        window.location.href = e.detail;
+      });
+
+       // var video = document.querySelectorAll("video")[0],
+        //   i,
+        //   track,
+        //   hideTracks = function () {
+        //     // Oddly, there's no way to remove a track from a video, so hide them instead
+        //     for (i = 0; i < video.textTracks.length; i++) {
+        //       video.textTracks[i].mode = "hidden";
+        //     }
+        //   };
+
+        // video.addEventListener("play", function () {
+        //   console.log("play");
+        //   hideTracks();
+        //   track = document.createElement("track");
+        //   track.kind = "captions";
+        //   track.label = "English";
+        //   track.srclang = "en";
+        //   //track.src = "https://mar-uat-sitecore.arm.com/~/media/video/sintel-en.vtt";
+        //   track.src = "./assets/video/sintel-en.vtt"
+        //   video.appendChild(track);
+        //   console.log('load')
+        //   console.log(track.mode)
+        //   track.mode = "showing";
+        //   video.textTracks[0].mode = "showing"; // thanks Firefox
+
+
+        //   // setTimeout(function() {
+        //   //   console.log('load')
+        //   //   track.mode = "showing";
+        //   //   video.textTracks[0].mode = "showing"; // thanks Firefox
+        //   // }, 0);
+        //   // track.addEventListener("load", function () {
+        //   //   console.log('load')
+        //   //   this.mode = "showing";
+        //   //   video.textTracks[0].mode = "showing"; // thanks Firefox
+        //   // });
+
+        // });
+    </script>
+  <script type="text/javascript" src="https://mar-uat-sitecore.arm.com/arm-global-web-components/newsroom/app.js"></script></body>
+</html>
